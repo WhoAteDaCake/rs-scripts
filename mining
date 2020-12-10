@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+
+# Defaults to banite
+MIN_OFFSET=1
+MAX_OFFSET=7
+BASE_BANK=18
+
+if [[ "$ORE_TYPE" = "runite" ]]; then
+  echo "Setting up for rune ore"
+  MIN_OFFSET=1
+  MAX_OFFSET=5
+  BASE_BANK=4
+fi
+
+# Fpr rune ore banek 4 offst 1-5
+function bank_offset() {
+ local offset=$(shuf -i $MIN_OFFSET-$MAX_OFFSET -n 1)
+ echo $((BASE_BANK + offset))
+}
+
+BANK_WHEN=$(bank_offset)
+SUM=0
+TIME=0
+
+echo "Starting in 4"
+sleep 4
+
+while true; do 
+  SUM=$(($SUM + 1))
+
+  xdotool click 1
+  TIME=$(shuf -i 14-27 -n 1)
+  echo "[$SUM/$BANK_WHEN] Sleeping for [$TIME]"
+  sleep $TIME;
+	
+  # After 15 + random clicks bank ore
+  if [[ "$SUM" -ge "$BANK_WHEN" ]];then
+    SUM=0
+    xdotool key w
+    BANK_WHEN=$(bank_offset)
+    echo "-------------------------"
+    TIME=$(shuf -i 2-4 -n 1)
+    echo "Sleeping for $TIME"
+    sleep $TIME 
+    echo "-------------------------"
+  fi
+done;
+

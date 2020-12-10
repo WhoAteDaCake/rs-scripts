@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+TIME=0
+echo "Starting in 4"
+sleep 4
+
+
+MI=80
+
+while true; do 
+  xdotool key w
+  TIME=$(shuf -i 130-140 -n 1)
+  sleep $((TIME / MI));
+
+  xdotool key space
+  sleep $(shuf -i 30-35 -n 1);
+done;
+

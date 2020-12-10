@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+TIME=0
+while true; do 
+  xdotool click 1
+  TIME=$(shuf -i 11-20 -n 1)
+  TIME=$(bc -l <<< "$TIME/10")
+
+  echo "Sleeping: $TIME";
+  sleep $TIME;
+done;

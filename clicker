@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+sleep 4
+echo "Starting"
+
+TIME=0
+while true; do 
+  xdotool click 1
+  TIME=$(shuf -i 53-87 -n 1)
+  echo "Sleeping for $TIME seconds"
+  sleep $TIME;
+done;

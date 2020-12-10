@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+TIME=0
+sleep 4
+echo "Starting"
+
+
+#while true; do 
+#  xdotool click 1
+#  TIME=$(shuf -i 160-180 -n 1)
+#  sleep $((TIME / 100));
+#
+#  xdotool key 2
+#  TIME=$(shuf -i 140-170 -n 1)
+#  sleep $((TIME / 100));
+#
+#  xdotool key w
+#  TIME=$(shuf -i 140-170 -n 1)
+#  sleep $((TIME / 100));
+#
+#  xdotool key space
+#  sleep $(shuf -i 16-20 -n 1);
+#done;
+
+MI=80
+# Slow mode
+while true; do 
+  xdotool click 1
+  TIME=$(shuf -i 150-180 -n 1)
+  sleep $((TIME / MI));
+
+  xdotool key 2
+  TIME=$(shuf -i 120-150 -n 1)
+  sleep $((TIME / MI));
+
+  xdotool key w
+  TIME=$(shuf -i 130-160 -n 1)
+  sleep $((TIME / MI));
+
+  xdotool key space
+  sleep $(shuf -i 16-19 -n 1);
+done;
+

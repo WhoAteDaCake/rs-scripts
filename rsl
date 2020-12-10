@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+WINDOW=$(xdotool search --onlyvisible runescape)
+DELAY=200
+
+function login() {
+    # Enter password
+    xdotool type --delay $DELAY --window $WINDOW $2
+    sleep 0.1
+    
+    # Enter username
+    xdotool key --window $WINDOW Tab
+    xdotool key --window $WINDOW --repeat 50 BackSpace
+    sleep 0.2
+    xdotool type --delay $DELAY --window $WINDOW $1
+    sleep 0.1
+    
+    # Login
+    xdotool key --window $WINDOW Tab
+    sleep 0.1
+    xdotool key --window $WINDOW KP_Enter
+}
+
+if [ "$1" == "flip" ]; then
+    login "jokubauskas.augustinas@gmail.com" "XphTP22aDY"
+    elif [ "$1" == "iron" ]; then
+    login "theblockygamer+iron@gmail.com" "kvahMXV9hW"
+else
+    login "slayforfurymcfs@inbox.lt" "rshotornot123"
+fi
+
