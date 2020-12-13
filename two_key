@@ -4,13 +4,14 @@ TIME=0
 sleep 4
 echo "Starting"
 
+# Saved for smelting
 while true; do 
-  xdotool key w
-  TIME=$(shuf -i 140-160 -n 1)
-  sleep $((TIME / 100));
+  xdotool click 1
+  TIME=$(shuf -i 130-180 -n 1)
+  sleep $(($TIME / 100));
 
   xdotool key space
-  sleep $(shuf -i 30-35 -n 1);
+  sleep $(shuf -i 104-110 -n 1);
 done;
 
 
