@@ -6,7 +6,7 @@ MIN_OFFSET=1
 MAX_OFFSET=8
 BASE_BANK=13
 
-if [[ "$ORE_TYPE" = "runite" ]]; then
+if [[ "$ORE" = "runite" ]]; then
   echo "Setting up for rune ore"
   MIN_OFFSET=1
   MAX_OFFSET=5
