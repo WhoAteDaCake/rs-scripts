@@ -9,8 +9,8 @@ BASE_BANK=13
 if [[ "$ORE" = "runite" ]]; then
   echo "Setting up for rune ore"
   MIN_OFFSET=1
-  MAX_OFFSET=5
-  BASE_BANK=4
+  MAX_OFFSET=3
+  BASE_BANK=2
 fi
 
 # Fpr rune ore banek 4 offst 1-5
