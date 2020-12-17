@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+TIME=0
+sleep 4
+echo "Starting"
+
+# Saved for smelting
+while true; do 
+  xdotool key n
+  TIME=$(shuf -i 110-180 -n 1)
+  sleep $(($TIME / 100));
+  
+  xdotool click 1
+  TIME=$(shuf -i 140-210 -n 1)
+  sleep $(($TIME / 100));
+done;
+
+
+
