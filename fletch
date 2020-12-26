@@ -13,6 +13,7 @@ while true; do
   sleep $((TIME / MI));
 
   xdotool key space
-  sleep $(shuf -i 30-35 -n 1);
+  sleep $(shuf -i 69-77 -n 1);
+  # sleep $(shuf -i 58-73 -n 1);
 done;
 

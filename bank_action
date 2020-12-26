@@ -22,7 +22,7 @@ echo "Starting"
 #  sleep $(shuf -i 16-20 -n 1);
 #done;
 
-MI=80
+MI=70
 # Slow mode
 while true; do 
   xdotool click 1
@@ -38,6 +38,6 @@ while true; do
   sleep $((TIME / MI));
 
   xdotool key space
-  sleep $(shuf -i 16-19 -n 1);
+  sleep $(shuf -i 49-57 -n 1);
 done;
 

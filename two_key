@@ -7,7 +7,7 @@ echo "Starting"
 # Saved for smelting
 while true; do 
   xdotool click 1
-  TIME=$(shuf -i 130-180 -n 1)
+  TIME=$(shuf -i 150-180 -n 1)
   sleep $(($TIME / 100));
 
   xdotool key space
